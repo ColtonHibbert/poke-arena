@@ -6,7 +6,7 @@ export const Navigation = ({ displaySignUpModalAction, displayLogInModalAction, 
     return (
         <div>
             <nav className="
-                w-100 flex flex-row justify-between items-center ph3 pv3 bg-light-gray
+                w-100 flex flex-row justify-between items-center ph3 pv3 bg-yellow
                 flex-column-ns
                 flex-column-m 
                 flex-row-l"
@@ -20,7 +20,7 @@ export const Navigation = ({ displaySignUpModalAction, displayLogInModalAction, 
                         </a>
                         <h1 
                             className="flex f5 f4-ns f3-m f2-l pl1 ma0"
-                        >Title</h1>
+                        >Poke-Arena</h1>
                     </div>
                 </div>
                 {
