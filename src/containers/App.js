@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import 'tachyons'
+import '../services/styles.css'
+//these styles apply to entire app by being injected at app level 
 import { connect } from 'react-redux'
 import { store } from '../index.js'
 import Navigation from '../components/Navigation.js' 
@@ -140,6 +142,13 @@ class App extends Component {
         </MobileMenu>
         : ''
       }
+      <div className="hero">
+      </div>
+      <div className="flex flex-row justify-between">
+        <div className="w-30 min-vh-100 flex bg-white">Blog</div>
+        <div className="w-50 min-vh-100 flex bg-red">Pokedex</div>
+        <div className="w-20 min-vh-100 flex bg-purple">Forum</div>
+      </div>
   </div>
     )
   }
