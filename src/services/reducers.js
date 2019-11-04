@@ -12,6 +12,7 @@ import {
     IS_LOGGED_IN,
     LOAD_USER,
     RESET_USER,
+    LOG_POKE
 } from './constants.js'
 
 
@@ -29,10 +30,16 @@ const initialState = {
         name: '',
         email: '',
         joined: ''
-    }
+    },
+    logPoke: ""
 }
 
 export const reducer = (state=initialState, action= {}) => {
+    if(action.type === LOG_POKE) {
+        return {
+            ...state,logPoke: action.logPokePayload
+        }
+    }
     if(action.type === DISPLAY_SIGN_UP_MODAL) {
         return {...state, displaySignUpModal: action.displaySignUpModalPayload }
     }

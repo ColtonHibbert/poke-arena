@@ -1,0 +1,17 @@
+.hero {
+	/*display: flex;*/
+	width: 100%;
+	height: 50vh;
+	background-image: url(cool-evee-background.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.min-width-100 {
+	min-width: 100%;
+}
+
+.min-width-50 {
+	min-width: 50%;
+}

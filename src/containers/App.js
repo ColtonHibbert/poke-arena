@@ -27,6 +27,7 @@ import {
   isMobileAction,
   displayMobileMenuAction,
   unDisplayMobileMenuAction,
+  getPokeAction,
 } from '../services/actions.js'
 
 
@@ -41,6 +42,7 @@ const mapStateToProps = (state) => {
     name: state.user.name,
     loggedIn: state.loggedIn,
     isMobile: state.isMobile,
+    logPoke: state.logPoke
   }
 }
 
@@ -145,8 +147,14 @@ class App extends Component {
       <div className="hero">
       </div>
       <div className="flex flex-row justify-between">
-        <div className="w-30 min-vh-100 flex bg-white">Blog</div>
-        <div className="w-50 min-vh-100 flex bg-red">Pokedex</div>
+        <div className="w-30 min-vh-100 flex bg-white">
+        Blog
+        </div>
+        <div className="w-50 min-vh-100 flex bg-red">
+        Pokedex
+        <button onClick={() => getPokeAction()}>get a ditto</button>
+        
+        </div>
         <div className="w-20 min-vh-100 flex bg-purple">Forum</div>
       </div>
   </div>
