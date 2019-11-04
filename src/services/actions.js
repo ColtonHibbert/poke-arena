@@ -13,9 +13,24 @@ import {
     IS_MOBILE,
     DISPLAY_MOBILE_MENU,
     UN_DISPLAY_MOBILE_MENU,
+    LOG_POKE,
 } from './constants.js';
 
+export const getPokeAction = () => {
+    fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    .then((response) =>  response.json()) 
+    .then((pokemon) => {
+        store.dispatch(logPokeAction(pokemon))
+        console.log(pokemon);
+    })  
+}
 
+export const logPokeAction = (payload) => {
+    return {
+        type: LOG_POKE,
+        logPokePayload: payload
+    }
+}
 
 export const displaySignUpModalAction = () => {
     return {
