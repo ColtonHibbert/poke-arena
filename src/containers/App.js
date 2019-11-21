@@ -28,6 +28,7 @@ import {
   displayMobileMenuAction,
   unDisplayMobileMenuAction,
   getPokeAction,
+  testGQL
 } from '../services/actions.js'
 
 
@@ -153,7 +154,7 @@ class App extends Component {
         <div className="w-50 min-vh-100 flex bg-red">
         Pokedex
         <button onClick={() => getPokeAction()}>get a ditto</button>
-        
+        <button onClick={() => testGQL()}>test gql</button>
         </div>
         <div className="w-20 min-vh-100 flex bg-purple">Forum</div>
       </div>

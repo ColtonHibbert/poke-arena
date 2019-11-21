@@ -25,6 +25,12 @@ export const getPokeAction = () => {
     })  
 }
 
+export const testGQL = () =>  {
+    fetch('localhost:3000/test')
+    .then(res => console.log(res))
+    //.then(result => console.log(result))
+}
+
 export const logPokeAction = (payload) => {
     return {
         type: LOG_POKE,
