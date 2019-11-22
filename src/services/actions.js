@@ -26,9 +26,9 @@ export const getPokeAction = () => {
 }
 
 export const testGQL = () =>  {
-    fetch('localhost:3000/test')
-    .then(res => console.log(res))
-    //.then(result => console.log(result))
+    fetch('http://localhost:3001/test')
+    .then(res => res.json())
+    .then(result => console.log(result))
 }
 
 export const logPokeAction = (payload) => {
@@ -134,7 +134,7 @@ export const unDisplayMobileMenuAction = (payload) => {
 
 
 export const sendSearchFieldAction = () => {
-    fetch('localhost:3000/searchfield', {
+    fetch('http://localhost:3000/searchfield', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -145,7 +145,7 @@ export const sendSearchFieldAction = () => {
 }
 
 export const sendSignUpAction = () => {
-    fetch('localhost:3000/signup', {
+    fetch('http://localhost:3000/signup', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -165,7 +165,7 @@ export const sendSignUpAction = () => {
 }
 
 export const sendLogIn = () => {
-    fetch('localhost:3000/login', {
+    fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
