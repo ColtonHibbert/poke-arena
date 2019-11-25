@@ -26,7 +26,20 @@ export const getPokeAction = () => {
 }
 
 export const testGQL = () =>  {
-    fetch('http://localhost:3001/test')
+    fetch('http://localhost:3001/graphql', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            query: 
+            `
+                {
+                    squirtle {
+                        name
+                    }
+                }
+            `
+        })
+    })
     .then(res => res.json())
     .then(result => console.log(result))
 }
